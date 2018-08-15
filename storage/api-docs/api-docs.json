@@ -1,0 +1,201 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "This is my API",
+        "description": "\u8bf7\u5148\u4f7f\u7528\u767b\u5f55\u63a5\u53e3 \u83b7\u53d6\u5230 Authorization \u7136\u540e\u5728\u8fdb\u884c\u5176\u4ed6\u63a5\u53e3\u7684\u8c03\u7528",
+        "termsOfService": "",
+        "version": "1.0.0"
+    },
+    "host": "api.host.com",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/swagger/my-data": {
+            "get": {
+                "tags": [
+                    "project"
+                ],
+                "summary": "\u62ff\u4e00\u4e9b\u795e\u79d8\u7684\u6570\u636e",
+                "description": "\u8bf7\u6c42\u8be5\u63a5\u53e3\u9700\u8981\u5148\u767b\u5f55\u3002",
+                "operationId": "getMyData",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "reason",
+                        "in": "formData",
+                        "description": "\u62ff\u6570\u636e\u7684\u7406\u7531",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "\u64cd\u4f5c\u6210\u529f"
+                    }
+                }
+            }
+        },
+        "/hr/business-trip/create-business-trip": {
+            "post": {
+                "tags": [
+                    "HR:BusinessTrip"
+                ],
+                "summary": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-Requested-With",
+                        "in": "header",
+                        "description": "AJAX\u6807\u8bc6 \u9ed8\u8ba4\u4e3a XMLHttpRequest",
+                        "required": true,
+                        "type": "string",
+                        "default": "XMLHttpRequest"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "required": [],
+                            "properties": {
+                                "user_uuid": {
+                                    "title": "\u53d1\u8d77\u4ebauuid",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u53d1\u8d77\u4ebauuid"
+                                },
+                                "depart_code": {
+                                    "title": "\u53d1\u8d77\u4eba\u90e8\u95e8code",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u53d1\u8d77\u4eba\u90e8\u95e8code"
+                                },
+                                "depart_name": {
+                                    "title": "\u53d1\u8d77\u4eba\u90e8\u95e8\u540d\u79f0",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u53d1\u8d77\u4eba\u90e8\u95e8\u540d\u79f0"
+                                },
+                                "position_level": {
+                                    "title": "\u804c\u4f4d",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u804c\u4f4d"
+                                },
+                                "start_at": {
+                                    "title": "\u51fa\u5dee\u5f00\u59cb\u65f6\u95f4",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u51fa\u5dee\u5f00\u59cb\u65f6\u95f4"
+                                },
+                                "end_at": {
+                                    "title": "\u51fa\u5dee\u7ed3\u675f\u65f6\u95f4",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u51fa\u5dee\u7ed3\u675f\u65f6\u95f4"
+                                },
+                                "days": {
+                                    "title": "\u51fa\u5dee\u5929\u6570",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u51fa\u5dee\u5929\u6570"
+                                },
+                                "detach_name": {
+                                    "title": "\u6d3e\u9063\u4eba",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u6d3e\u9063\u4eba"
+                                },
+                                "business_trip_content": {
+                                    "title": "\u51fa\u5dee\u4e8b\u7531\u548c\u9884\u8ba1\u8fbe\u6210\u76ee\u6807",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u51fa\u5dee\u4e8b\u7531\u548c\u9884\u8ba1\u8fbe\u6210\u76ee\u6807"
+                                },
+                                "together_people": {
+                                    "title": "\u540c\u884c\u4eba\u5458",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u540c\u884c\u4eba\u5458"
+                                },
+                                "customer_company": {
+                                    "title": "\u88ab\u62dc\u8bbf\u5355\u4f4d",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u88ab\u62dc\u8bbf\u5355\u4f4d"
+                                },
+                                "customer_name": {
+                                    "title": "\u62dc\u8bbf\u4eba",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u62dc\u8bbf\u4eba"
+                                },
+                                "contact_way": {
+                                    "title": "\u8054\u7cfb\u65b9\u5f0f",
+                                    "description": "\u53d1\u8d77\u51fa\u5dee\u7533\u8bf7",
+                                    "type": "string",
+                                    "default": "\u8054\u7cfb\u65b9\u5f0f"
+                                },
+                                "predict_cost": {
+                                    "description": "\u9884\u8ba1\u8d39\u7528",
+                                    "type": "object",
+                                    "default": {
+                                        "traffic_price": "\u4ea4\u901a\u8d39",
+                                        "meal_price": "\u9910\u8d39",
+                                        "stay_price": "\u4f4f\u5bbf\u8d39",
+                                        "serve_price": "\u5ba2\u6237\u62db\u5f85\u8d39",
+                                        "else_price": "\u5176\u5b83\u8d39\u7528",
+                                        "total": "\u5408\u8ba1"
+                                    }
+                                },
+                                "air_ticket": {
+                                    "description": "\u673a\u7968\u9884\u5b9a\u4fe1\u606f",
+                                    "type": "object",
+                                    "default": [
+                                        {
+                                            "name": "\u59d3\u540d",
+                                            "start_at": "\u51fa\u53d1\u65e5\u671f",
+                                            "start_time_frame": "\u51fa\u53d1\u65f6\u6bb5",
+                                            "end_at": "\u8fd4\u7a0b\u65e5\u671f",
+                                            "end_time_frame": "\u8fd4\u7a0b\u65f6\u6bb5",
+                                            "start_place": "\u51fa\u53d1\u5730",
+                                            "destination": "\u76ee\u7684\u5730",
+                                            "id_card": "\u8eab\u4efd\u8bc1\u53f7\u7801"
+                                        },
+                                        {
+                                            "name": "\u59d3\u540d",
+                                            "start_at": "\u51fa\u53d1\u65e5\u671f",
+                                            "start_time_frame": "\u51fa\u53d1\u65f6\u6bb5",
+                                            "end_at": "\u8fd4\u7a0b\u65e5\u671f",
+                                            "end_time_frame": "\u8fd4\u7a0b\u65f6\u6bb5",
+                                            "start_place": "\u51fa\u53d1\u5730",
+                                            "destination": "\u76ee\u7684\u5730",
+                                            "id_card": "\u8eab\u4efd\u8bc1\u53f7\u7801"
+                                        }
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "\u64cd\u4f5c\u6210\u529f"
+                    },
+                    "500": {
+                        "description": "\u64cd\u4f5c\u5931\u8d25"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
