@@ -28,7 +28,8 @@ class SwaggerController extends Controller
      */
     public function getMyData()
     {
-        echo 1;die;
+        config(['project.test.b','写我进去']);
+
 
     }
 
