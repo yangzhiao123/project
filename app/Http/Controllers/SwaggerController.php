@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\BaseModel;
 use Illuminate\Http\Request;
-
 
 class SwaggerController extends Controller
 {
+
+    use BaseModel;
+
     /**
      * 假设是项目中的一个API
      *
@@ -28,8 +31,7 @@ class SwaggerController extends Controller
      */
     public function getMyData()
     {
-        config(['project.test.b','写我进去']);
-
+        echo $this->baseTest();
 
     }
 
