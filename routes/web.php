@@ -20,3 +20,5 @@ Route::get('/swagger/my-data','SwaggerController@getMyData');
 
 Route::get('/oauth','Admin\LoginController@oauth');
 
+Route::get('excel/export','ExcelController@export');
+Route::get('excel/import','ExcelController@import');
