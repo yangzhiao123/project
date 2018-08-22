@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 
 Route::get('/swagger/my-data','SwaggerController@getMyData');
+
+Route::get('/oauth','Admin\LoginController@oauth');
+
