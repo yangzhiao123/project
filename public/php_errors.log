@@ -118,3 +118,20 @@
 [22-Aug-2018 05:28:52 UTC] PHP  36. Composer\Autoload\ClassLoader->loadClass() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Container\Container.php:752
 [22-Aug-2018 05:28:52 UTC] PHP  37. Composer\Autoload\includeFile() D:\phpStudy\WWW\project\vendor\composer\ClassLoader.php:322
 [22-Aug-2018 05:28:52 UTC] PHP  38. include() D:\phpStudy\WWW\project\vendor\composer\ClassLoader.php:444
+[07-Sep-2018 01:12:52 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\phpStudy\WWW\project\vendor\symfony\var-dumper\Cloner\VarCloner.php on line 12
+[07-Sep-2018 01:12:53 UTC] PHP Stack trace:
+[07-Sep-2018 01:12:53 UTC] PHP   1. Illuminate\Foundation\Bootstrap\HandleExceptions->handleException() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\HandleExceptions.php:0
+[07-Sep-2018 01:12:53 UTC] PHP   2. Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\HandleExceptions.php:89
+[07-Sep-2018 01:12:53 UTC] PHP   3. App\Exceptions\Handler->render() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\HandleExceptions.php:112
+[07-Sep-2018 01:12:53 UTC] PHP   4. Illuminate\Foundation\Exceptions\Handler->render() D:\phpStudy\WWW\project\app\Exceptions\Handler.php:51
+[07-Sep-2018 01:12:53 UTC] PHP   5. Illuminate\Foundation\Exceptions\Handler->prepareResponse() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php:187
+[07-Sep-2018 01:12:53 UTC] PHP   6. Illuminate\Foundation\Exceptions\Handler->convertExceptionToResponse() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php:286
+[07-Sep-2018 01:12:53 UTC] PHP   7. Illuminate\Foundation\Exceptions\Handler->renderExceptionWithWhoops() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php:313
+[07-Sep-2018 01:12:53 UTC] PHP   8. tap() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php:338
+[07-Sep-2018 01:12:53 UTC] PHP   9. Illuminate\Foundation\Exceptions\Handler->Illuminate\Foundation\Exceptions\{closure}() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Support\helpers.php:1038
+[07-Sep-2018 01:12:53 UTC] PHP  10. Illuminate\Foundation\Exceptions\Handler->whoopsHandler() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php:333
+[07-Sep-2018 01:12:53 UTC] PHP  11. Whoops\Handler\PrettyPageHandler->__construct() D:\phpStudy\WWW\project\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php:363
+[07-Sep-2018 01:12:53 UTC] PHP  12. class_exists() D:\phpStudy\WWW\project\vendor\filp\whoops\src\Whoops\Handler\PrettyPageHandler.php:127
+[07-Sep-2018 01:12:53 UTC] PHP  13. spl_autoload_call() D:\phpStudy\WWW\project\vendor\filp\whoops\src\Whoops\Handler\PrettyPageHandler.php:127
+[07-Sep-2018 01:12:53 UTC] PHP  14. Composer\Autoload\ClassLoader->loadClass() D:\phpStudy\WWW\project\vendor\filp\whoops\src\Whoops\Handler\PrettyPageHandler.php:127
+[07-Sep-2018 01:12:53 UTC] PHP  15. Composer\Autoload\includeFile() D:\phpStudy\WWW\project\vendor\composer\ClassLoader.php:322

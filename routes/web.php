@@ -22,3 +22,7 @@ Route::get('/oauth','Admin\LoginController@oauth');
 
 Route::get('excel/export','ExcelController@export');
 Route::get('excel/import','ExcelController@import');
+
+
+# 发送邮件
+Route::get('mail/send','MailController@send');
