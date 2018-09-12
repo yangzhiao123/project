@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use Overtrue\Pinyin\Pinyin;
 
 class MailController extends Controller
 {
@@ -19,6 +20,19 @@ class MailController extends Controller
         });
         // 返回的一个错误数组，利用此可以判断是否发送成功
         dd(Mail::failures());
+    }
+
+    /**
+     * @desc 中文转拼音
+     * @return int
+     */
+    public function pinYin()
+    {
+
+         $pinyin = new Pinyin();
+         $name_spell = $pinyin->convert('杨志傲'); # 转化每个中文的拼音 并用数组隔开
+         dd(implode('',$name_spell));
+
     }
 
 }
