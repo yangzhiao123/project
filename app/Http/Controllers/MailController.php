@@ -31,8 +31,15 @@ class MailController extends Controller
 
          $pinyin = new Pinyin();
          $name_spell = $pinyin->convert('杨志傲'); # 转化每个中文的拼音 并用数组隔开
-         dd(implode('',$name_spell));
 
+         echo (implode('',$name_spell));
+
+    }
+
+
+    public function ceShi()
+    {
+        echo 1111;die;
     }
 
 }
