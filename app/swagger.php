@@ -5,7 +5,7 @@ namespace App;
 /**
  * @SWG\Swagger(
  *     schemes={"http"},
- *     host="106.14.193.254",
+ *     host="api.host.com",
  *     basePath="/",
  *     @SWG\Info(
  *         version="1.0.0",
