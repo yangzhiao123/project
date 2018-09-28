@@ -30,4 +30,4 @@ Route::get('mail/pin_yin','MailController@pinYin');
 
 
 
-Route::get('mail/pin_yin','MailController@ceShi');
+Route::get('mail/ce_shi','MailController@ceShi');
