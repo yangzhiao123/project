@@ -27,7 +27,3 @@ Route::get('excel/import','ExcelController@import');
 # 发送邮件
 Route::get('mail/send','MailController@send');
 Route::get('mail/pin_yin','MailController@pinYin');
-
-
-
-Route::get('mail/pin_yin','MailController@ceShi');
