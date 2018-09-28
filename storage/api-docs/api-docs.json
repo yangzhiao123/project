@@ -6,7 +6,7 @@
         "termsOfService": "",
         "version": "1.0.0"
     },
-    "host": "api.host.com",
+    "host": "106.14.193.254",
     "basePath": "/",
     "schemes": [
         "http"
